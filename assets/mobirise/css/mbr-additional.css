@@ -1,10 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap);
+
+
+
+
 
 body {
   font-family: Roboto;
 }
 .display-1 {
-  font-family: '吉页大儒宋体繁-怀旧版';
+  font-family: 'Barlow', sans-serif;
   font-size: 6rem;
   line-height: 1;
 }
@@ -12,7 +17,7 @@ body {
   font-size: 9.6rem;
 }
 .display-2 {
-  font-family: '憚珜湮趼极楛';
+  font-family: 'Barlow', sans-serif;
   font-size: 3.8rem;
   line-height: 1.1;
 }
@@ -28,7 +33,7 @@ body {
   font-size: 1.8rem;
 }
 .display-5 {
-  font-family: '吉页大儒宋体繁-怀旧版';
+  font-family: 'Barlow', sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
 }
@@ -36,7 +41,7 @@ body {
   font-size: 1.92rem;
 }
 .display-7 {
-  font-family: '吉页大儒宋体繁-怀旧版';
+  font-family: 'Barlow', sans-serif;
   font-size: 1.6rem;
 }
 .display-7 > .mbr-iconfont {
@@ -556,7 +561,7 @@ a:hover {
 }
 /* Scroll to top button*/
 .form-control {
-  font-family: '吉页大儒宋体繁-怀旧版';
+  font-family: 'Barlow', sans-serif;
   font-size: 1.6rem;
 }
 .form-control > .mbr-iconfont {
