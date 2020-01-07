@@ -1,0 +1,140 @@
+{
+  "settings": {
+    "name": "尋找成功人士",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "dinerm4",
+      "title": "DinerM4",
+      "styling": {
+        "primaryColor": "#ff7f9f",
+        "secondaryColor": "#fbbe36",
+        "successColor": "#89b758",
+        "infoColor": "#29361a",
+        "warningColor": "#808080",
+        "dangerColor": "#B1A374",
+        "mainFont": "Roboto",
+        "display1Font": "吉页大儒宋体繁-怀旧版",
+        "display1Size": 6,
+        "display2Font": "憚珜湮趼极楛",
+        "display2Size": 3.8,
+        "display5Font": "吉页大儒宋体繁-怀旧版",
+        "display5Size": 1.6,
+        "display7Font": "吉页大儒宋体繁-怀旧版",
+        "display7Size": 1.6,
+        "display4Font": "Roboto",
+        "display4Size": "1.5",
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": true
+      },
+      "additionalSetColors": [
+        "#f3f7ee"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.11.6",
+    "siteFonts": [
+      {
+        "css": "'憚珜湮趼极楛'",
+        "name": "憚珜湮趼极楛",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/%E6%86%9A%E7%8F%9C%E6%B9%AE%E8%B6%BC%E6%9E%81%E6%A5%9B/font.ttf"
+      },
+      {
+        "css": "'吉页大儒宋体繁-怀旧版'",
+        "name": "吉页大儒宋体繁-怀旧版",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/%E5%90%89%E9%A1%B5%E5%A4%A7%E5%84%92%E5%AE%8B%E4%BD%93%E7%B9%81-%E6%80%80%E6%97%A7%E7%89%88/font.ttf"
+      },
+      {
+        "css": "'Barlow', sans-serif",
+        "name": "Barlow",
+        "url": "https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      },
+      {
+        "css": "'Permanent Marker', handwriting",
+        "name": "Permanent Marker",
+        "url": "https://fonts.googleapis.com/css?family=Permanent+Marker:400"
+      },
+      {
+        "css": "'Roboto', sans-serif",
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/noun-certified-1852075.svg",
+    "noImageResize": true,
+    "cssOptimize": true,
+    "lazyLoad": true,
+    "lazyType": "placeholder",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "pwa-switcher": false,
+    "uniqCompNum": 1,
+    "versionPublish": "4.11.6"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(45deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H2": {
+              "color": "#232323"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#232323"
+            },
+            "img": {
+              "max-width": "1000px",
+              "margin": "auto"
+            },
+            "@media (max-width: 992px)": {
+              "img": {
+                "max-width": "500px",
+                "margin": "auto"
+              }
+            },
+            "H1": {
+              "color": "#ff7f9f",
+              "text-align": "center"
+            }
+          },
+          "_name": "header01",
+          "_customHTML": "<section class=\"header01\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"20\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Show Image\" name=\"showImage\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/2020114-7.png\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#000000\" condition=\"gradientBg && bg.type == 'color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n\n            <div class=\"col-md-12 col-lg-8 align-center\">\n\n                <h2 class=\"mbr-section-subtitle mbr-exbold mbr-light mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-5\">再现赤嵌署光计画</h2>\n                <h1 class=\"mbr-section-title pb-3 mbr-exbold mbr-fonts-style\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\">寻找成功人士</h1>\n\n\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-4\">你是「成功」人士嗎？趕快來登記</p>\n                <div class=\"mbr-section-btn\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-if=\"showButtons\" mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"#top\" data-app-placeholder=\"Type Text\"><span class=\"mbri-touch mbr-iconfont mbr-iconfont-btn\"></span>點我登記</a></div>\n\n                <div class=\"mbr-figure pt-5\" mbr-if=\"showImage\">\n                    <img src=\"@PROJECT_PATH@/assets/images/2020114-9.png\" alt=\"Mobirise\" title>\n                </div>\n\n            </div>\n\n\n\n\n\n\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rMwWLmzgOO",
+          "_anchor": "header01-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
